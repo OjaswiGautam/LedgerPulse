@@ -1,0 +1,8 @@
+version: 1
+alert_budget: 0.01
+watermark_lateness_hours: 24
+reference_window_days: 14
+tumbling_window_days: 1
+segment_min_support: 500
+anchor_holdout_fraction: 0.15
+cooldown_days: 7

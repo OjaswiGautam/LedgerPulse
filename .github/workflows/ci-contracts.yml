@@ -1,0 +1,11 @@
+name: CI Contracts
+
+on: [push, pull_request]
+
+jobs:
+  contract-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate OpenAPI & Event Schemas
+        run: echo "TODO: Add Spectral OpenAPI lint & Schemathesis conformance run"

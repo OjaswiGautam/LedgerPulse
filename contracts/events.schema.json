@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LedgerPulse SSE Domain Events",
+  "type": "object",
+  "required": ["event_id", "run_id", "type", "ts", "payload"],
+  "properties": {
+    "event_id": { "type": "string" },
+    "run_id": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": [
+        "run.status_changed",
+        "clock.tick",
+        "score.batch_summary",
+        "drift.breached",
+        "alarm.created",
+        "alarm.status_changed",
+        "challenger.training_started",
+        "challenger.training_completed",
+        "gate.completed",
+        "deployment.changed",
+        "case.created",
+        "case.labeled",
+        "report.ready",
+        "ingestion.quarantined",
+        "system.degraded"
+      ]
+    },
+    "ts": { "type": "string", "format": "date-time" },
+    "payload": { "type": "object" }
+  }
+}

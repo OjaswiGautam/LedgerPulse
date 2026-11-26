@@ -1,0 +1,1 @@
+"""ULID primary key generator."""

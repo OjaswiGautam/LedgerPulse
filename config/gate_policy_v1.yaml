@@ -1,0 +1,29 @@
+name: gate_policy_default
+version: 1
+checks:
+  G1_maturity:
+    min_label_maturity: 0.80
+    hard: true
+  G2_pr_auc:
+    min_delta_drifted: 0.01
+    global_ci_lower_floor: -0.005
+    hard: true
+  G3_recall_at_budget:
+    min_margin: 0.0
+    hard: true
+  G4_calibration:
+    max_ece: 0.05
+    hard: true
+  G5_net_cost:
+    fraud_loss_rate: 1.0
+    fp_review_cost: 5.0
+    hard: true
+  G6_antiforgetting:
+    max_anchor_pr_auc_drop: 0.02
+    hard: true
+  G7_segment_non_regression:
+    max_segment_drop: 0.03
+    hard: true
+  G8_stability:
+    alert_volume_tolerance: 0.25
+    hard: false

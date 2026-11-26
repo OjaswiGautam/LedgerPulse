@@ -1,0 +1,16 @@
+version: 1
+k_of_m:
+  k: 3
+  m: 4
+fdr_q: 0.05
+detectors:
+  D1_psi:
+    bins: 10
+    warn: 0.10
+    breach: 0.25
+  D2_wasserstein:
+    iqr_normalized: true
+  D3_score_shift:
+    psi_breach: 0.25
+  D5_adwin:
+    delta: 0.002

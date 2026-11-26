@@ -1,0 +1,22 @@
+openapi: 3.1.0
+info:
+  title: LedgerPulse API
+  version: 1.0.0
+  description: Concept-Drift Adaptive Fraud Detection Research Prototype API
+servers:
+  - url: /api/v1
+paths:
+  /health:
+    get:
+      summary: Liveness check
+      responses:
+        "200":
+          description: Service is alive
+  /ready:
+    get:
+      summary: Readiness check (Postgres, Parquet path, MLflow)
+      responses:
+        "200":
+          description: All dependencies ready
+        "503":
+          description: Dependency unavailable

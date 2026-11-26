@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+
+# Local data volume (keep .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/parquet/*
+!data/parquet/.gitkeep
+data/mlflow/*
+!data/mlflow/.gitkeep
+
+# Environment & IDE
+.env
+.env.local
+.DS_Store
+.vscode/
+.idea/
